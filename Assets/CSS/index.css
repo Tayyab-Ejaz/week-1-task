@@ -688,6 +688,11 @@ body {
     color: #b4a19d;
 }
 
+.mb-3
+{
+    margin-bottom: 2rem;
+}
+
 .rotate-animation {
     position: relative;
     animation-name: rotate;
