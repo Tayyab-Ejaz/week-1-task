@@ -3,6 +3,7 @@
     --dark-grey: rgb(111, 129, 131);
     --yellow: rgb(250, 185, 91);
     --yellow-with-opacity: rgba(250, 185, 91, 0.83);
+    --light-background:rgb(248, 249, 250);
 
 }
 
@@ -610,6 +611,7 @@ body {
     border: none;
     border-bottom: 1px solid var(--dull-white);
     color: var(--dull-white);
+    font-size: 16px;
 }
 
 .contact-us-section .text-area {
@@ -621,6 +623,7 @@ body {
     padding: 10px 10px;
     height: 200px;
     color: var(--dull-white);
+    font-size: 16px;
 }
 
 .contact-us-section .input-field:focus,
@@ -666,6 +669,100 @@ body {
 .contact-us-section .send-message-button:hover::before {
     width: 100%;
     opacity: 0.3;
+}
+
+.footer-section
+{
+    padding: 70px 20px;
+    background-color: var(--light-background);
+}
+.footer-section .row
+{
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer-section .row .col-4
+{
+    flex: 0 1 33.33%;
+    padding: 10px 20px;
+}
+
+.footer-section .row .col-2
+{
+    flex: 0 1 16.66%;
+     padding: 10px 20px;   
+}
+
+.footer-section .row .heading
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-section .row .description, 
+.footer-section .row .address
+{
+    color: var(--dark-grey);
+}
+
+.footer-section .row .nav-item-container
+{
+    margin: 20px auto;
+}
+
+.footer-section .row .nav-item-container .nav-item
+{
+    text-decoration: none;
+    color: var(--dark-grey);
+    transition: all 0.3s;
+}
+
+.footer-section .row .nav-item-container .nav-item:hover
+{
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+.footer-section .row .social-icons-container
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section .row .social-icons-container i
+{
+    font-size: 20px;
+    color: var(--dark-grey);
+    transition: all 0.3s;
+}
+
+.footer-section .row .social-icons-container i:hover
+{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.footer-section .copyright
+{
+    color: var(--dark-grey);
+    text-align: center;
+    margin: 25px auto;
+}
+
+@media screen and (max-width: 768px)
+{
+    .footer-section .row
+    {
+        flex-wrap: wrap;
+    }
+    .footer-section .row .col-4, 
+    .footer-section .row  .col-2
+    {
+        flex: 0 1 100%;
+    }
 }
 
 .text-align-center {
