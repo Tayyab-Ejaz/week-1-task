@@ -4,7 +4,6 @@
     --yellow: rgb(250, 185, 91);
     --yellow-with-opacity: rgba(250, 185, 91, 0.83);
     --light-background: rgb(248, 249, 250);
-
 }
 
 * {
@@ -54,13 +53,12 @@ body {
 }
 
 @keyframes fade-in-bottom {
-    0%
-    {
+    0% {
         bottom: -100px;
         opacity: 0;
     }
-    100%
-    {
+
+    100% {
         bottom: 0;
         opacity: 1;
     }
@@ -97,12 +95,11 @@ body {
 }
 
 @keyframes fade-in-top {
-    0%
-    {
+    0% {
         top: -100px;
     }
-    100%
-    {
+
+    100% {
         top: 0;
     }
 }
@@ -197,7 +194,6 @@ body {
     }
 }
 
-
 .hero-text-section {
     flex: 1 1 auto;
     width: 50%;
@@ -207,7 +203,6 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-
 
 .hero-text-section .hero-text {
     color: var(--dull-white);
@@ -355,7 +350,6 @@ body {
     margin-top: 0;
 }
 
-
 @media screen and (max-width:768px) {
     .services-section .row .left-column {
         flex: 0 1 auto;
@@ -374,7 +368,6 @@ body {
         flex: 0 1 75%;
     }
 }
-
 
 .about-me-section {
     background-color: white;
@@ -493,9 +486,6 @@ body {
         flex: 0 1 100%;
     }
 }
-
-
-
 
 .client-review-section {
     background-color: var(--yellow);
