@@ -4,7 +4,6 @@
     --yellow: rgb(250, 185, 91);
     --yellow-with-opacity: rgba(250, 185, 91, 0.83);
     --light-background: rgb(248, 249, 250);
-
 }
 
 * {
@@ -49,18 +48,17 @@ body {
     text-decoration: none;
     position: relative;
     animation-name: fade-in-bottom;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-out;
 }
 
 @keyframes fade-in-bottom {
-    0%
-    {
+    0% {
         bottom: -100px;
         opacity: 0;
     }
-    100%
-    {
+
+    100% {
         bottom: 0;
         opacity: 1;
     }
@@ -92,17 +90,16 @@ body {
     text-decoration: none;
     position: relative;
     animation-name: fade-in-top;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-out;
 }
 
 @keyframes fade-in-top {
-    0%
-    {
+    0% {
         top: -100px;
     }
-    100%
-    {
+
+    100% {
         top: 0;
     }
 }
@@ -128,7 +125,7 @@ body {
         display: none;
         transition: all 0.3s;
         animation-name: fade-in;
-        animation-duration: 0.3s;
+        animation-duration: 0.4s;
         animation-timing-function: ease-out;
         background-color: var(--yellow-with-opacity);
         position: relative;
@@ -197,7 +194,6 @@ body {
     }
 }
 
-
 .hero-text-section {
     flex: 1 1 auto;
     width: 50%;
@@ -207,7 +203,6 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-
 
 .hero-text-section .hero-text {
     color: var(--dull-white);
@@ -248,7 +243,6 @@ body {
     font-size: 16px;
     border-radius: 40px;
     border: none;
-    position: relative;
     z-index: 1;
     position: relative;
     animation-name: fade-in-left;
@@ -256,6 +250,7 @@ body {
     animation-timing-function: ease-out;
     animation-delay: 0.0s;
 }
+
 
 @keyframes fade-in-left {
     0% {
@@ -355,7 +350,6 @@ body {
     margin-top: 0;
 }
 
-
 @media screen and (max-width:768px) {
     .services-section .row .left-column {
         flex: 0 1 auto;
@@ -374,7 +368,6 @@ body {
         flex: 0 1 75%;
     }
 }
-
 
 .about-me-section {
     background-color: white;
@@ -494,25 +487,39 @@ body {
     }
 }
 
-
-
-
 .client-review-section {
     background-color: var(--yellow);
+    padding: 70px 0px;
 }
 
 .client-review-section-inner {
     max-width: 1170px;
     margin: auto;
     width: 60%;
-    padding: 70px 0px;
+    padding: 0px;
+    display: none;
+    /* transition: all 0.3s; */
+    animation-name:fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.8s;
+}
+
+@keyframes fade-in {
+    0%
+    {
+        opacity: 0.3;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 
 .client-review-section .client-review-section-inner .heading {
     font-size: 2rem;
     color: var(--dull-white);
     text-align: center;
-    padding: 30px 0px 70px;
+    padding: 40px 0px 80px;
 }
 
 .client-review-section .client-review-section-inner .quote-symbol {
@@ -534,24 +541,33 @@ body {
     text-align: center;
 }
 
-.client-review-section .client-review-section-inner .indicators-row {
+.client-review-section .client-review-section-inner .slide-title
+{
+    text-align: center;
+    color: var(--dull-white);
+}
+
+.client-review-section  .indicators-row {
     margin: 30px auto;
     display: flex;
     justify-content: center;
 }
 
-.client-review-section .client-review-section-inner .indicators-row i {
+.client-review-section  .indicators-row i {
     color: #b4a19d;
     font-size: 9px;
     margin: 0px 8px;
+    position: relative;
+    transition: all 0.5s;
 }
 
-.client-review-section .client-review-section-inner .indicators-row i:hover {
+.client-review-section  .indicators-row i:hover {
     cursor: pointer;
+    transform: scale(2);
 }
 
-.client-review-section .client-review-section-inner .indicators-row i.active,
-.client-review-section .client-review-section-inner .indicators-row i:hover {
+.client-review-section  .indicators-row i.active,
+.client-review-section  .indicators-row i:hover {
     color: var(--dull-white);
 }
 
@@ -580,6 +596,14 @@ body {
     background-color: white;
     border-radius: 3px;
     box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.432);
+    position: relative;
+    transition: all 0.4s;
+}
+
+.featured-post-section .card-deck .card:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .featured-post-section .card-deck .card img {
@@ -787,11 +811,13 @@ body {
     font-size: 20px;
     color: var(--dark-grey);
     transition: all 0.3s;
+    position: relative;
 }
 
 .footer-section .row .social-icons-container i:hover {
     cursor: pointer;
     color: var(--yellow);
+    transform: scale(2);
 }
 
 .footer-section .copyright {
@@ -846,5 +872,33 @@ body {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.fade-in-left
+{
+    position: relative;
+    animation-name: fade-in-left;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.fade-in-right
+{
+    position: relative;
+    animation-name: fade-in-right;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in-right {
+    0% {
+        right: -100%;
+        opacity: 0.3;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
     }
 }
