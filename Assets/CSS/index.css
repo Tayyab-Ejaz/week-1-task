@@ -697,7 +697,7 @@ body {
 
 .contact-us-section .input-field {
     width: 100%;
-    color: var(--dull-white-with-opacity);
+    color: var(--dull-white);
     margin: 20px 0px;
     padding: 10px 10px;
     background-color: transparent;
