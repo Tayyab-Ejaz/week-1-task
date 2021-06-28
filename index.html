@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="/Assets/CSS/index.css">
 </head>
 
-<body>
+<body id="body">
     <header class="top-header">
         <nav class="navbar">
-            <a class="nav-item text-align-right active">Home</a>
-            <a class="nav-item text-align-right">About</a>
-            <a class="nav-item text-align-right">Services</a>
+            <a class="nav-item text-align-right active" href="/index.html">Home</a>
+            <a class="nav-item text-align-right" href="#about-me-section">About</a>
+            <a class="nav-item text-align-right" href="#services-section">Services</a>
             <a class="logo" href="/index.html">Credo</a>
-            <a class="nav-item">Photography</a>
-            <a class="nav-item">Blog</a>
+            <a class="nav-item" href="#">Photography</a>
+            <a class="nav-item" href="#featured-post-section">Blog</a>
             <a class="nav-item" href="#contact-section">Contact</a>
             <div class="hamberger-icon" id="nav-toggler">
                 <i class="fa fa-bars"></i>
@@ -33,16 +33,16 @@
                 delectus culpa, fugiat magnam dolore excepturi perspiciatis illum rem vel. Accusantium sunt nesciunt
                 quaerat libero dolores, esse eligendi quibusdam.</p>
             <div class="mb-3">
-                <Button class="contact-button">Contact Me</Button>
+                <a href="#contact-section" class="contact-button">Contact Me</a>
             </div>
         </section>
     </header>
 
 
-    <section class="services-section">
+    <section class="services-section" id="services-section">
         <h1 class="text-align-center heading">Services</h1>
         <div class="row">
-            <div class="left-column">
+            <div class="left-column services-section-left-column" >
                 <div class="service-block">
                     <div class="left-column">
                         <div class="service-icon">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-column">
+            <div class="right-column services-section-right-column" >
                 <div class="service-block">
                     <div class="left-column">
                         <div class="service-icon">
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="left-column">
+            <div class="left-column services-section-left-column">
                 <div class="service-block">
                     <div class="left-column">
                         <div class="service-icon">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-column">
+            <div class="right-column services-section-right-column">
                 <div class="service-block">
                     <div class="left-column">
                         <div class="service-icon">
@@ -110,7 +110,7 @@
     </section>
 
 
-    <section class="about-me-section">
+    <section class="about-me-section" id="about-me-section">
         <h1 class="heading">About Me</h1>
         <div class="row">
             <div class="left-column">
@@ -199,7 +199,7 @@
 
     <section class="client-review-section">
         <div class="client-review-section-inner">
-            <div class="heading">What Client Are Saying</div>
+            <div class="heading">What Client Are Saying - 1</div>
             <div class="quote-symbol">
                 <i class="fas fa-quote-right"></i>
             </div>
@@ -210,16 +210,48 @@
                 distinctio ullam molestias, earum praesentium! Odit necessitatibus dolorem maxime!
             </p>
             <p class="author-name">- Ryan Peters</p>
-            <div class="indicators-row">
-                <i class="fas fa-circle "></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle active"></i>
+            <p class="slide-title">slide-1</p>
+
+        </div>
+        <div class="client-review-section-inner">
+            <div class="heading">What Client Are Saying - 2</div>
+            <div class="quote-symbol">
+                <i class="fas fa-quote-right"></i>
             </div>
+            <p class="quote">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi maiores modi quo tempora, nostrum
+                fugiat alias id sit. Impedit, vel? Totam voluptatibus saepe, magnam facilis consequuntur itaque aut
+                asperiores repellendus quas, modi reprehenderit cum sequi minus molestiae iusto voluptatem sunt
+                distinctio ullam molestias, earum praesentium! Odit necessitatibus dolorem maxime!
+            </p>
+            <p class="author-name">- Ryan Peters</p>
+            <p class="slide-title">slide-2 </p>
+
+        </div>
+        <div class="client-review-section-inner">
+            <div class="heading">What Client Are Saying - 3</div>
+            <div class="quote-symbol">
+                <i class="fas fa-quote-right"></i>
+            </div>
+            <p class="quote">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi maiores modi quo tempora, nostrum
+                fugiat alias id sit. Impedit, vel? Totam voluptatibus saepe, magnam facilis consequuntur itaque aut
+                asperiores repellendus quas, modi reprehenderit cum sequi minus molestiae iusto voluptatem sunt
+                distinctio ullam molestias, earum praesentium! Odit necessitatibus dolorem maxime!
+            </p>
+            <p class="author-name">- Ryan Peters</p>
+            <p class="slide-title">slide-3</p>
+
+        </div>
+        <div class="indicators-row">
+            <i class="fas fa-circle active indicator" onclick="showslide(1)"></i>
+            <i class="fas fa-circle indicator" onclick="showslide(2)"></i>
+            <i class="fas fa-circle indicator " onclick="showslide(3)"></i>
         </div>
     </section>
 
 
-    <section class="featured-post-section">
+    <section class="featured-post-section" id="featured-post-section">
         <div class="heading">Blog Posts</div>
         <div class="card-deck">
             <div class="card">
@@ -279,7 +311,7 @@
             <input type="text" name="" id="" class="input-field" placeholder="Email Address" />
             <input type="text" name="" id="" class="input-field" placeholder="Subject of the message" />
             <textarea name="" id="" class="text-area" placeholder="Type your message here"></textarea>
-            <button type="submit" class="send-message-button">Send Message</button>
+            <button  onclick="showAlert()" class="send-message-button">Send Message</button>
         </form>
     </section>
 
@@ -329,7 +361,7 @@
                 </div>
             </div>
             <div class="col-2">
-                <div class="heading">Follow Me</div>    
+                <div class="heading">Follow Me</div>
                 <div class="social-icons-container">
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-facebook-f"></i>
@@ -339,10 +371,12 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Copyright &#169; 2021. All rights reserved | This template is made <i class="far fa-heart"></i> with by Colorlib</div>
+        <div class="copyright">Copyright &#169; 2021. All rights reserved | This template is made <i
+                class="far fa-heart"></i> with by Colorlib</div>
     </footer>
 
     <script>
+        // Navbar toggle function
         document.getElementById("nav-toggler").addEventListener("click", () => {
             let navItems = document.getElementsByClassName("nav-item");
             for (let i = 0; i < navItems.length; i++) {
@@ -350,6 +384,50 @@
             }
             document.getElementById("nav-toggler").classList.toggle("rotate-animation");
         });
+
+
+
+        // Slider Code
+        let slides = document.getElementsByClassName("client-review-section-inner");
+        let indicators = document.getElementsByClassName("indicator");
+        slides[0].style.display = "block";
+
+        function showslide(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                indicators[i].classList.remove("active");
+            }
+            slides[n - 1].style.display = "block";
+            indicators[n-1].classList.add("active"); 
+        }
+
+
+        // Set scroll listener on body
+        let servicesSection=document.getElementById("services-section");
+        let servicesSectionLeftColumns=document.getElementsByClassName("services-section-left-column");
+        let servicesSectionRightColumns=document.getElementsByClassName("services-section-right-column");
+        window.addEventListener('scroll', ()=>
+        {
+            if(window.scrollY + 200>servicesSection.offsetTop)
+            {
+                for(let i=0; i<servicesSectionLeftColumns.length; i++)
+                {
+                    servicesSectionLeftColumns[i].classList.add("fade-in-left");
+                }
+                for(let i=0; i<servicesSectionRightColumns.length; i++)
+                {
+                    servicesSectionRightColumns[i].classList.add("fade-in-right");
+                }
+            }   
+        });
+
+
+        // Show Alert on send message button
+        function showAlert()
+        {
+            window.alert("Message sent!");
+            event.preventDefault();
+        }
     </script>
 </body>
 
