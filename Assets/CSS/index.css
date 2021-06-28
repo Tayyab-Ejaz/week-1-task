@@ -1,5 +1,6 @@
 :root {
     --dull-white: rgb(236, 246, 228);
+    --dull-white-with-opacity: rgba(236, 246, 228, 0.534);
     --dark-grey: rgb(111, 129, 131);
     --yellow: rgb(250, 185, 91);
     --yellow-with-opacity: rgba(250, 185, 91, 0.83);
@@ -249,6 +250,8 @@ body {
     border-radius: 40px;
     border: none;
     z-index: 1;
+    display: inline-block;
+    text-decoration: none;
     position: relative;
     animation-name: fade-in-left;
     animation-duration: 0.3s;
@@ -694,13 +697,12 @@ body {
 
 .contact-us-section .input-field {
     width: 100%;
-    color: var(--dull-white);
+    color: var(--dull-white-with-opacity);
     margin: 20px 0px;
     padding: 10px 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid var(--dull-white);
-    color: var(--dull-white);
+    border-bottom: 1px solid var(--dull-white-with-opacity);
     font-size: 16px;
 }
 
@@ -723,7 +725,7 @@ body {
 
 .contact-us-section .input-field::placeholder,
 .contact-us-section .text-area::placeholder {
-    color: white;
+    color: var(--dull-white-with-opacity);
     font-family: Arial, Helvetica, sans-serif;
 }
 
